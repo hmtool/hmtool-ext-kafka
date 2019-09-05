@@ -1,37 +1,28 @@
-# hmtool-ext-kafka
+# kafka-spring
 
-#### 介绍
-kafka 通用
+#### 项目介绍
+kafka基础spring版
+基于spring,apache的kafka-clients的包装
+支持jdk11、springboot1 springboot2、springcloud1,springcloud2 使用简单快捷！
+公司生产上使用、此为抽离出的简要版
 
-#### 软件架构
-软件架构说明
+-----------------------------------------
+0.0.1         目前版本  
 
+####功能说明
+0.0.1版更新功能
+    1.实现动态更新生产配置、
+    2.动态关闭消费者配置
+    3.分片规则默认随机
+    4.动态根据所配置的信息创建对应的spring bean、消费
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 安装kafka
+2. 配置jdk8+
+3. 配置maven
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. 引入kafka、util工具包
+2. 简单配置
