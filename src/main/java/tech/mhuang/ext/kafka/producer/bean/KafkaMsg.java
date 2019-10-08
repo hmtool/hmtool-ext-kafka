@@ -19,9 +19,18 @@ public class KafkaMsg implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 主题
+     */
     private String topic;
 
+    /**
+     * 偏移量
+     */
     private Long offset;
 
+    /**
+     * 消息数据
+     */
     private Object msg;
 }

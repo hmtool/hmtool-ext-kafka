@@ -16,6 +16,8 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class ProducerBean extends KafkaBean {
 
+    private boolean enable;
+
     @JSONField(name = "key.serializer")
     private String keySerializer;
 
@@ -41,6 +43,7 @@ public class ProducerBean extends KafkaBean {
     private String partitionerClass;
 
     public ProducerBean() {
+
         this.setBatchSize(KafkaGlobal.FIELD_PRODUCER_BATCH_SIZE_DEFAULT);
         this.setAcks(KafkaGlobal.FIELD_PRODUCER_ACKS_DEFAULT);
         this.setValueSerializer(KafkaGlobal.FIELD_VALUE_SERIALIZERDEFAULT);

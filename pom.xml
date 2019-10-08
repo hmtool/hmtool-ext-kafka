@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>tech.mhuang</groupId>
     <artifactId>hmtool-ext-kafka</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>hmtool-ext-kafka</name>
     <parent>
         <artifactId>hmtool-ext-parent</artifactId>
         <groupId>tech.mhuang</groupId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <relativePath>../hmtool-ext-parent/pom.xml</relativePath>
     </parent>
     <properties>

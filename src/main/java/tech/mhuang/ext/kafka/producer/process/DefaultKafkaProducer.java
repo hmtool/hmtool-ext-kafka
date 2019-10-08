@@ -74,7 +74,7 @@ public class DefaultKafkaProducer<K, V> extends AbstractObServer<Map> implements
      * refresh producer config
      */
     private void refresh() {
-        producer = new org.apache.kafka.clients.producer.KafkaProducer<>(prop);
+        this.producer = new org.apache.kafka.clients.producer.KafkaProducer<>(prop);
     }
 
     final String ACTION = "action";
@@ -84,7 +84,7 @@ public class DefaultKafkaProducer<K, V> extends AbstractObServer<Map> implements
      */
     @Override
     protected void execute() {
-        if (KafkaEvent.CREATE == super.data.getOrDefault(ACTION, KafkaEvent.CREATE)) {
+        if (KafkaEvent.CREATE.equals(super.data.getOrDefault(ACTION, KafkaEvent.CREATE))) {
             this.prop.putAll(super.data);
             this.refresh();
         }

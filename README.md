@@ -1,28 +1,32 @@
-# kafka-spring
+<p align="center">
+elasticsearch-kafka 基于hmtool的扩展工具包
+</p>
+<p align="center">
+-- 主页：<a href="http://mhuang.tech/hmtool-ext-kafka">http://mhuang.tech/hmtool-ext-kafka</a>  --
+</p>
+<p align="center">
+    -- QQ群①:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=6703688b236038908f6c89b732758d00104b336a3a97bb511048d6fdc674ca01"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="hmtool官方交流群①" title="hmtool官方交流群①"></a>
+</p>
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### 项目介绍
-kafka基础spring版
-基于spring,apache的kafka-clients的包装
-支持jdk11、springboot1 springboot2、springcloud1,springcloud2 使用简单快捷！
-公司生产上使用、此为抽离出的简要版
+## 简介
+hmtool-ext-kafka 是一个基于apache-kafka和hmtool-core 封装的便捷工具包、简单几行代码即可对kafka进行操作
 
------------------------------------------
-0.0.1         目前版本  
 
-####功能说明
-0.0.1版更新功能
-    1.实现动态更新生产配置、
-    2.动态关闭消费者配置
-    3.分片规则默认随机
-    4.动态根据所配置的信息创建对应的spring bean、消费
+## 安装
 
-#### 安装教程
-
-1. 安装kafka
-2. 配置jdk8+
-3. 配置maven
-
-#### 使用说明
-
-1. 引入kafka、util工具包
-2. 简单配置
+### MAVEN
+在pom.xml中加入
+```
+    <dependency>
+        <groupId>tech.mhuang</groupId>
+        <artifactId>hmtool-ext-kafka</artifactId>
+        <version>${last.version}</version>
+    </dependency>
+```
+### 非MAVEN
+下载任意链接
+- [Maven中央库1](https://repo1.maven.org/maven2/tech/mhuang/hmtool-ext-kafka/)
+- [Maven中央库2](http://repo2.maven.org/maven2/tech/mhuang/hmtool-ext-kafka/)
+> 注意
+> hmtool只支持jdk1.8以上的版本

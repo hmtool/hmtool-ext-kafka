@@ -16,6 +16,8 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class ConsumerBean extends KafkaBean {
 
+    private boolean enable;
+
     /**
      * 建的反序列化
      */

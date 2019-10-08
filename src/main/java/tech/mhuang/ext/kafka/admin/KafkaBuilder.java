@@ -32,21 +32,51 @@ public class KafkaBuilder {
             producer = new ProducerBean();
         }
 
+        /**
+         * 是否开启当前的生产者 默认不开启
+         * @param enable 开启
+         * @return
+         */
+        public ProducerBuilder enable(boolean enable){
+            this.producer.setEnable(enable);
+            return this;
+        }
+
+        /**
+         * 设置生产者服务、不设置根据通用的进行配置（通用默认是本地127.0.0.1:9200)
+         * @param servers 服务ip端口
+         * @return
+         */
         public ProducerBuilder servers(String servers) {
             this.producer.setServers(servers);
             return this;
         }
 
+        /**
+         * 设置生产序列化key的类、默认apache string的序列化类
+         * @param keySerializer 序列化
+         * @return
+         */
         public ProducerBuilder keySerializer(String keySerializer) {
             this.producer.setKeySerializer(keySerializer);
             return this;
         }
 
+        /**
+         * 设置生产序列化value的类、默认apache string的序列化类
+         * @param valueSerializer 序列化
+         * @return
+         */
         public ProducerBuilder valueSerializer(String valueSerializer) {
             this.producer.setValueSerializer(valueSerializer);
             return this;
         }
 
+        /**
+         * 设置应答、默认all
+         * @param acks 应答
+         * @return
+         */
         public ProducerBuilder acks(String acks) {
             this.producer.setAcks(acks);
             return this;
@@ -94,6 +124,10 @@ public class KafkaBuilder {
             this.consumer = new ConsumerBean();
         }
 
+        public ConsumerBuilder enable(boolean enable){
+            this.consumer.setEnable(enable);
+            return this;
+        }
         public ConsumerBuilder servers(String servers) {
             this.consumer.setServers(servers);
             return this;

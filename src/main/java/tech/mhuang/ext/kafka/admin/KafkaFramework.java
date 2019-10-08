@@ -105,14 +105,22 @@ public class KafkaFramework {
             if (CollectionUtil.isEmpty(info.getProducerMap())) {
                 throw new JkafkaException("生产者启动但没有配置对应生产者,...");
             }
-            info.getProducerMap().forEach((key, value) -> generatorPro(key, value));
+            info.getProducerMap().forEach((key, value) -> {
+                if(value.isEnable()){
+                    generatorPro(key, value);
+                }
+            });
         }
         //消费者启动
         if (info.isEnableConsumer()) {
             if (CollectionUtil.isEmpty(info.getConsumerMap())) {
                 throw new JkafkaException("消费者启动但没有配置对应消费者,...");
             }
-            info.getConsumerMap().forEach((key, value) -> generatorCon(key, value));
+            info.getConsumerMap().forEach((key, value) -> {
+                if(value.isEnable()){
+                    generatorCon(key, value);
+                }
+            });
         }
         log.debug("start kafka client success..");
     }

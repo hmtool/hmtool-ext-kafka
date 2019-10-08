@@ -1,6 +1,7 @@
 package tech.mhuang.ext.kafka.admin.bean;
 
 import tech.mhuang.ext.kafka.consumer.bean.ConsumerBean;
+import tech.mhuang.ext.kafka.global.constans.KafkaGlobal;
 import tech.mhuang.ext.kafka.producer.bean.ProducerBean;
 import lombok.Data;
 
@@ -17,9 +18,9 @@ import java.util.Map;
 public class KafkaInfo {
 
     /**
-     * 对应的通用服务
+     * 对应的通用服务 默认本地
      */
-    private String servers;
+    private String servers = KafkaGlobal.DEFAULT_SERVERS;
 
     /**
      * 对应的序列化key

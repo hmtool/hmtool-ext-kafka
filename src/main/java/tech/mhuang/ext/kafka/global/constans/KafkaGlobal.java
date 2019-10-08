@@ -44,4 +44,5 @@ public class KafkaGlobal {
     public final static Integer FIELD_CONSUMER_PULL_DEFAULT = 200;
     public final static Integer FIELD_CONSUMER_THREAD_PARTITION_DEFAULT = 1;
 
+    public static final String DEFAULT_SERVERS = "127.0.0.1:9092";
 }
