@@ -16,6 +16,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class ConsumerBean extends KafkaBean {
 
+    /**
+     * 是否开启消费者
+     */
+    @JSONField(serialize = false)
     private boolean enable;
 
     /**
@@ -61,10 +65,10 @@ public class ConsumerBean extends KafkaBean {
     private String groupId;
 
     /**
-     * 拉取的间隔
+     * 拉取的间隔(秒）
      */
     @JSONField(serialize = false)
-    private Integer pull;
+    private Long pull;
 
     /**
      * 线程数

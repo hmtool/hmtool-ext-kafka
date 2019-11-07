@@ -19,8 +19,6 @@ public enum KafkaEvent {
     RESUME,
     /**
      * 销毁
-     *
-     * @version:
      */
     DESTROY,
     /**

@@ -18,6 +18,8 @@ import org.apache.kafka.common.TopicPartition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
+import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -77,7 +79,8 @@ public class DefaultKafkaConsumer extends AbstractObServer<JSONObject> implement
             Boolean isCallBackMethod = StringUtil.isNotEmpty(consumerBean.getInvokeCallback());
 
             while (running.get()) {
-                ConsumerRecords<Object, Object> records = consumer.poll(consumerBean.getPull());
+
+                ConsumerRecords<Object, Object> records = consumer.poll(Duration.ofSeconds(consumerBean.getPull()));
 
                 records.forEach(record -> {
                     logger.info("kafka反馈给系统的数据是:{}", record);

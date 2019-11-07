@@ -41,7 +41,7 @@ public class KafkaGlobal {
     public final static Integer FIELD_CONSUMER_AUTO_COMMIT_INTERVAL_MS_DEFAULT = 3000;
     public final static Integer FIELD_CONSUMER_SESSION_TIMEOUT_MS_DEFAULT = 30000;
     public final static String FIELD_CONSUMER_AUTO_OFFSET_RESET_DEFAULT = "latest";
-    public final static Integer FIELD_CONSUMER_PULL_DEFAULT = 200;
+    public final static Long FIELD_CONSUMER_PULL_DEFAULT = 1L;
     public final static Integer FIELD_CONSUMER_THREAD_PARTITION_DEFAULT = 1;
 
     public static final String DEFAULT_SERVERS = "127.0.0.1:9092";

@@ -16,14 +16,27 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class ProducerBean extends KafkaBean {
 
+    /**
+     * 是否开启生产者
+     */
+    @JSONField(serialize = false)
     private boolean enable;
 
+    /**
+     * key序列化
+     */
     @JSONField(name = "key.serializer")
     private String keySerializer;
 
+    /**
+     * value序列化
+     */
     @JSONField(name = "value.serializer")
     private String valueSerializer;
 
+    /**
+     * 确认方式(默认ALL)
+     */
     @JSONField(name = "acks")
     private String acks;
 
