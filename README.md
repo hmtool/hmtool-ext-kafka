@@ -28,5 +28,5 @@ hmtool-ext-kafka 是一个基于apache-kafka和hmtool-core 封装的便捷工具
 下载任意链接
 - [Maven中央库1](https://repo1.maven.org/maven2/tech/mhuang/hmtool-ext-kafka/)
 - [Maven中央库2](http://repo2.maven.org/maven2/tech/mhuang/hmtool-ext-kafka/)
-> 注意
+> 注意  
 > hmtool只支持jdk1.8以上的版本
